@@ -18,8 +18,7 @@ jobs:
 
       - uses: docker/build-push-action@v4
         with:
-          build-args: |
-            SOURCE_COMMIT=${{ github.sha }}
+          build-args: SOURCE_COMMIT = ${{ github.sha }}
           file: ./Dockerfile
           push: true
           tags: testgolos/wallet:latest
